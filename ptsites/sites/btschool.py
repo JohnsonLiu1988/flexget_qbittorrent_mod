@@ -36,18 +36,6 @@ class MainClass(NexusPHP, ReseedPasskey):
             ),
         ]
 
-    @property
-    def details_selector(self) -> dict:
-        selector = super().details_selector
-        net_utils.dict_merge(selector, {
-            'details': {
-                'points': {
-                    'regex': '做种积分:.*?([\d.,]+)',
-                }
-            }
-        })
-        return selector
-
     def sign_in_by_location(self, entry: SignInEntry, config: dict, work: Work, last_content: str) -> Response | None:
         response = self.request(entry, 'get', work.url)
         reload__net_state = check_network_state(entry, work.url, response)

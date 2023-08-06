@@ -50,7 +50,7 @@ class NexusPHP(PrivateTorrent, ABC):
                     'handle': handle_infinite
                 },
                 'points': {
-                    'regex': (r'(魔力|Bonus|Bônus).*?([\d,.]+)', 2)
+                    'regex': (r'(魔力值|魔力|Bonus|Bônus).*?([\d,.]+)', 2)
                 },
                 'join_date': {
                     'regex': (r'(加入日期|注册日期|Join.date|Data de Entrada).*?(\d{4}-\d{2}-\d{2})', 2),
