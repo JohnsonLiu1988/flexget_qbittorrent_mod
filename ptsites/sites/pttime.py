@@ -47,6 +47,9 @@ class MainClass(Attendance, ReseedPasskey):
                 'leeching': {
                     'regex': (r'活动:.*?(\d+).*?(\d+)', 2)
                 },
+                'points': {
+                    'regex': (r'(魔力值|魔力|Bonus|Bônus).*?([\d,.]+).*?([\d,.]+)', 3)
+                }
             }
         })
         return selector
