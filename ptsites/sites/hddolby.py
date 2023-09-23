@@ -19,7 +19,7 @@ class MainClass(AttendanceHR, ReseedCookie):
         net_utils.dict_merge(selector, {
             'details': {
                 'points': {
-                    'regex': (r'(\u9b54\u529b\u503c|\u9b54\u529b|Bonus|Bônus|\u9cb8\u5e01).*?([\d,.]+)', 2)
+                    'regex': (r'(魔力值|魔力|Bonus|Bônus|鲸币).*?([\d,.]+)', 2)
                 },
             }
         })
