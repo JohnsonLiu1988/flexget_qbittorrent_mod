@@ -1,11 +1,11 @@
 from typing import Final
 
 from ..utils import net_utils
-from ..schema.nexusphp import AttendanceHR
+from ..schema.nexusphp import Attendance
 from ..utils.value_handler import size
 
 
-class MainClass(AttendanceHR):
+class MainClass(Attendance):
     URL: Final = 'https://pandapt.net/'
     USER_CLASSES: Final = {
         'downloaded': [size(250, 'GiB'), size(8, 'TiB')],
